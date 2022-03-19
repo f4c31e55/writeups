@@ -1,11 +1,11 @@
 import angr, logging
 
-from angry_qemu import QEMU_Proxy
+from angry_qemu import Hexagon_QEMU_Proxy
 
 log = logging.getLogger('hexagon'); log.setLevel(logging.INFO)
 
 
-q = QEMU_Proxy([
+q = Hexagon_QEMU_Proxy([
     'gdbserver', '127.0.0.1:1235', 
     'qemu-hexagon','./hexagon'
 ])
